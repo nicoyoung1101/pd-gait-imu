@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>PD Gait Features in Wearable-Sensor Pose Estimation · ICNR 2026 P-113</title>
+<style>
+  :root {
+    --navy: #1F3864;
+    --ink: #1a1a1a;
+    --muted: #555;
+    --line: #d6dde8;
+    --band: #eef3f9;
+    --green: #548235;
+    --blue: #5B9BD5;
+    --bg: #ffffff;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; background: var(--bg); color: var(--ink);
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+    font-size: 17px; line-height: 1.55;
+  }
+  main { max-width: 760px; margin: 0 auto; padding: 24px 16px 48px; }
+  .tag {
+    display: inline-block; background: var(--navy); color: #fff;
+    font-weight: 700; font-size: 14px; letter-spacing: .02em;
+    padding: 4px 10px; border-radius: 4px;
+  }
+  h1 { color: var(--navy); font-size: 26px; line-height: 1.25; margin: 14px 0 10px; }
+  .authors { font-size: 16px; margin: 0; }
+  .affil { font-size: 14px; color: var(--muted); margin: 4px 0 0; }
+  h2 {
+    color: var(--navy); font-size: 19px; margin: 32px 0 10px;
+    padding-bottom: 6px; border-bottom: 2px solid var(--navy);
+  }
+  .video {
+    margin-top: 22px; background: #000; border-radius: 6px; overflow: hidden;
+    aspect-ratio: 16 / 9; display: flex; align-items: center; justify-content: center;
+  }
+  .video video { width: 100%; height: 100%; display: block; }
+  .video .soon { color: #cfd8e6; font-size: 16px; padding: 16px; text-align: center; }
+  .caption { font-size: 14px; color: var(--muted); margin: 8px 0 0; }
+  .thm {
+    background: var(--band); border-left: 5px solid var(--navy);
+    padding: 12px 16px; margin: 0; list-style: none;
+  }
+  .thm li { font-weight: 700; color: var(--navy); margin: 6px 0; }
+  table { border-collapse: collapse; width: 100%; font-size: 16px; }
+  th, td { text-align: left; padding: 8px 6px; border-bottom: 1px solid var(--line); }
+  th { color: var(--muted); font-weight: 600; font-size: 14px; }
+  td.num { font-variant-numeric: tabular-nums; font-weight: 700; color: var(--green); }
+  .note { font-size: 14px; color: var(--muted); margin: 8px 0 0; }
+  .cite {
+    background: #f6f7f9; border: 1px solid var(--line); border-radius: 4px;
+    padding: 12px 14px; font-size: 14px; overflow-wrap: anywhere;
+  }
+  a { color: var(--navy); }
+  footer { margin-top: 36px; font-size: 13px; color: var(--muted); }
+</style>
+</head>
+<body>
+<main>
+  <span class="tag">ICNR 2026 · Poster P-113</span>
+  <h1>Preserving Clinically Relevant Gait Features in Wearable-Sensor Pose Estimation for Parkinson’s Disease</h1>
+  <p class="authors">Kai Yang<sup>1</sup>, Haoyuan Sun<sup>1</sup>, Hiroyuki Hamada<sup>1</sup>, Ken Kikuchi<sup>1</sup>, Atsushi Yamashita<sup>1</sup>, Diego Torricelli<sup>2</sup>, and Qi An<sup>1,*</sup></p>
+  <p class="affil"><sup>1</sup>The University of Tokyo &nbsp;·&nbsp; <sup>2</sup>Centre for Automation and Robotics (CAR), Spanish National Research Council</p>
+
+  <div class="video" id="video">
+    <p class="soon">Reconstruction video will appear here shortly.</p>
+  </div>
+  <p class="caption">Reference motion compared with pose-only (P) and clinical-aware (C) fine-tuning.</p>
+
+  <h2>Take-home message</h2>
+  <ul class="thm">
+    <li>Clinical-aware fine-tuning reduced joint-velocity and leg-swing errors vs. pose-only fine-tuning.</li>
+    <li>The benefit held with a head-free five-IMU set, updating only 0.48% of parameters.</li>
+  </ul>
+
+  <h2>Main result</h2>
+  <table>
+    <thead><tr><th>C − P (absolute log-ratio error)</th><th>Six IMUs</th><th>Five IMUs</th></tr></thead>
+    <tbody>
+      <tr><td>Joint velocity</td><td class="num">−0.025</td><td class="num">−0.037</td></tr>
+      <tr><td>Sagittal leg swing</td><td class="num">−0.027</td><td class="num">−0.022</td></tr>
+    </tbody>
+  </table>
+  <p class="note">Negative values mean lower error with clinical-aware tuning. All four 95% confidence intervals exclude zero. Virtual IMUs from 781 walks of 23 people with Parkinson’s disease; subject-wise cross-validation.</p>
+
+  <h2>Cite</h2>
+  <div class="cite">K. Yang, H. Sun, H. Hamada, K. Kikuchi, A. Yamashita, D. Torricelli, and Q. An, “Preserving Clinically Relevant Gait Features in Wearable-Sensor Pose Estimation for Parkinson’s Disease,” International Conference on NeuroRehabilitation (ICNR 2026), Seoul, Poster P-113.</div>
+
+  <h2>Contact</h2>
+  <p>Qi An (corresponding author) — <a href="mailto:anqi@robot.t.u-tokyo.ac.jp">anqi@robot.t.u-tokyo.ac.jp</a></p>
+
+  <footer>Supported by JSPS 21K12711, JST Moonshot JPMJMS2239, and Spanish Continuum PID2024-162745OB-I00 (MICIU/AEI 10.13039/501100011033 and ERDF/EU).</footer>
+</main>
+</body>
+</html>
